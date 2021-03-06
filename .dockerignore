@@ -175,3 +175,7 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 *.xcuserstate
+
+## Folder on project
+Banana_Linux_NoVis/
+

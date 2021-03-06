@@ -63,10 +63,10 @@ class Agent:
         self.seed = random.seed(seed)
 
     def __str__(self):
-        pass
+        return 'RL_Agent_class'
 
     def __repr__(self):
-        pass
+        return 'RL_Agent_class'
 
     @staticmethod
     def env_step(env, action, brain_name):
@@ -145,7 +145,7 @@ class Agent:
 
         # Epsilon-greedy action selection
         if random.random() > eps:
-            return np.argmax(action_values)
+            return np.argmax(action_values.cpu().data.numpy())
         else:
             return random.choice(np.arange(self.action_size))
 
@@ -208,10 +208,10 @@ class ReplayBuffer:
         self.seed = random.seed(seed)
 
     def __str__(self):
-        pass
+        return 'ReplayBuffer_class'
 
     def __repr__(self):
-        pass
+        return 'ReplayBuffer_class'
 
     def __len__(self):
         """Return the current size of internal memory."""

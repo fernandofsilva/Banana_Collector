@@ -3,7 +3,15 @@ from collections import deque
 import torch
 
 
-def interact(env, agent, brain_name, n_episodes, max_t, eps_start, eps_end, eps_decay):
+def interact(env,
+             agent,
+             brain_name,
+             n_episodes,
+             max_t,
+             eps_start,
+             eps_end,
+             eps_decay,
+             save_model='model/checkpoint.pth'):
     """Interaction between agent and environment.
 
     This function define the interaction between the agent and the openai gym
@@ -18,6 +26,7 @@ def interact(env, agent, brain_name, n_episodes, max_t, eps_start, eps_end, eps_
         eps_start: Float. Starting value of epsilon, for epsilon-greedy action selection
         eps_end: Float. Minimum value of epsilon
         eps_decay: Float. Multiplicative factor (per episode) for decreasing epsilon
+        save_model: String. Path+file_name to save the model
     """
     scores = []                        # list containing scores from each episode
     scores_window = deque(maxlen=100)  # last 100 scores
@@ -55,7 +64,7 @@ def interact(env, agent, brain_name, n_episodes, max_t, eps_start, eps_end, eps_
             print(f'\nEnvironment solved in {i_episode-100:d} episodes!\tAverage Score: {np.mean(scores_window):.2f}')
 
             # Save model
-            torch.save(agent.model_local.state_dict(), 'model/checkpoint.pth')
+            torch.save(agent.model_local.state_dict(), save_model)
 
     return scores
 

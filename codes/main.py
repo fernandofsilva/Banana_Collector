@@ -62,6 +62,6 @@ if __name__ == '__main__':
         n_episodes=args.n_episodes,
         max_t=args.max_t,
         eps_start=args.eps_start,
-        eps_end=args.eps_start,
-        eps_decay=args.eps_start
+        eps_end=args.eps_end,
+        eps_decay=args.eps_decay
     )

@@ -51,12 +51,11 @@ def interact(env, agent, brain_name, n_episodes, max_t, eps_start, eps_end, eps_
         if i_episode % 100 == 0:
             print(f'\rEpisode {i_episode}\tAverage Score: {np.mean(scores_window):.2f}')
 
-        if np.mean(scores_window) >= 200.0:
+        if np.mean(scores_window) >= 13.0:
             print(f'\nEnvironment solved in {i_episode-100:d} episodes!\tAverage Score: {np.mean(scores_window):.2f}')
 
             # Save model
             torch.save(agent.model_local.state_dict(), 'checkpoint.pth')
-            break
 
     return scores
 

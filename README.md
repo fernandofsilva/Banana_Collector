@@ -32,52 +32,27 @@ docker pull fernandofsilva/banana_collector
 
 ## Usage
 
-Run with default parameters
+Run the container to start the jupyter notebook server
 
 ```bash
-docker run fernandofsilva/banana_collector 
+docker run -t -p 8888:8888 fernandofsilva/banana_collector 
 ```
 
-Run with custom parameters
-
-```bash
-docker run fernandofsilva/banana_collector  --n_episodes 2000 --max_t 1000 --eps_start 1.0 --eps_end 0.01 --eps_decay 0.995 --buffer_size 100000 --batch_size 64 --gamma 0.99 --tau 0.001 --lr 0.0005 --update_every 4 
-```
-
-Each parameter correspond to:
-
-- n_episodes: maximum number of training episodes
-- max_t: maximum number of time-steps per episode
-- eps_start: starting value of epsilon, for epsilon-greedy action selection
-- eps_end: minimum value of epsilon
-- eps_decay: multiplicative factor (per episode) for decreasing epsilon
-- buffer_size: replay buffer size
-- batch_size: mini-batch size
-- gamma: discount rate
-- tau: a soft update of target parameters
-- lr: learning rate
-- update_ever: how often to update the network
-
-
-## Output
-
-Expected final output
-
-```
-Environment solved in 448 episodes!	Average Score: 13.01
-```
+And you can access the notebook through the link is provided.
 
 
 ## Scores
 
-Below, there are the scores during training of the neural network
+Below, there are the scores during training of the neural network, the environment was solved in the episode 432. 
 
 ![](images/scores.png)
 
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)

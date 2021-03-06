@@ -55,7 +55,7 @@ def interact(env, agent, brain_name, n_episodes, max_t, eps_start, eps_end, eps_
             print(f'\nEnvironment solved in {i_episode-100:d} episodes!\tAverage Score: {np.mean(scores_window):.2f}')
 
             # Save model
-            torch.save(agent.model_local.state_dict(), 'checkpoint.pth')
+            torch.save(agent.model_local.state_dict(), 'model/checkpoint.pth')
 
     return scores
 

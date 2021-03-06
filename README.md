@@ -64,7 +64,7 @@ Each parameter correspond to:
 Expected final output
 
 ```
-Episode 2000    Average Score: -0.10
+Environment solved in 448 episodes!	Average Score: 13.01
 ```
 
 

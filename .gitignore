@@ -130,3 +130,6 @@ dmypy.json
 
 # MacOS folder
 .DS_Store
+
+# Project folder
+Banana_Linux_NoVis/

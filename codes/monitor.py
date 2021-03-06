@@ -31,6 +31,7 @@ def interact(env,
     scores = []                        # list containing scores from each episode
     scores_window = deque(maxlen=100)  # last 100 scores
     eps = eps_start                    # initialize epsilon
+    solved_env = 0
 
     # Loop the define episodes
     for i_episode in range(1, n_episodes+1):
@@ -60,11 +61,11 @@ def interact(env,
         if i_episode % 100 == 0:
             print(f'\rEpisode {i_episode}\tAverage Score: {np.mean(scores_window):.2f}')
 
-        if np.mean(scores_window) >= 13.0:
+        if np.mean(scores_window) >= 13.0 and solved_env == 0:
             print(f'\nEnvironment solved in {i_episode-100:d} episodes!\tAverage Score: {np.mean(scores_window):.2f}')
 
             # Save model
             torch.save(agent.model_local.state_dict(), save_model)
+            solved_env += 1
 
     return scores
-

@@ -30,7 +30,7 @@ RUN unzip unity/Banana_Linux_NoVis.zip -d .
 # Start jupyter notebook (uncomment to change the environment and run the
 # container through the command:
 #   docker run -p 8888:8888 fernandofsilva/banana_collector
-#CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
 
 # Run python script
-ENTRYPOINT ["python", "/app/codes/main.py"]
+#ENTRYPOINT ["python", "/app/codes/main.py"]

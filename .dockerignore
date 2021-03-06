@@ -125,7 +125,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 ### OSX template
-.DS_Store
+*.DS_Store
 .AppleDouble
 .LSOverride
 

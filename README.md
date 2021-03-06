@@ -40,6 +40,9 @@ docker run -t -p 8888:8888 fernandofsilva/banana_collector
 
 And you can access the notebook through the link is provided.
 
+To train the agent with different parameters, you just need to access the notebook, change the parameters on the sections
+4.1 and 4.2 and check the results on section 4.3.
+
 
 ## Scores
 
